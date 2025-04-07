@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perfil de Habilidades de Alejandro Benitez</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
+  <link rel="stylesheet" href="styles.css"> <!-- Vinculamos el CSS -->
+</head>
+<body>
+
+  <!-- Barra de redes sociales -->
+  <div class="social-icons">
+    <a href="https://www.youtube.com/@alebenitez95" target="_blank" title="YouTube">
+      <i class="fab fa-youtube"></i>
+    </a>
+    <a href="https://github.com/AleBenitez95" target="_blank" title="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/ale-benitez-quidato-89428b354" target="_blank" title="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </div>
+
+  <h1>Alejandro Benítez</h1>
+  <p>Habilidades en tecnologías</p>
+
+  <div class="search-container">
+    <input 
+      type="text" 
+      id="search-bar" 
+      class="search-bar" 
+      placeholder="Buscar habilidades..." 
+      onkeyup="searchSkills()" 
+    />
+  </div>
+
+  <div class="skills-container" id="skills-container">
+    <!-- Las tarjetas de habilidades se generarán con JS -->
+  </div>
+
+  <!-- Modal -->
+  <div id="modal">
+    <div class="modal-box">
+      <h2 id="modal-title">Título</h2>
+      <p id="modal-content">Contenido</p>
+      <p id="page-indicator" style="margin: 10px 0; font-weight: bold;">Página 1 de 3</p>
+      <div>
+        <button id="prev-btn" onclick="changePage(-1)">⬅ Anterior</button>
+        <button id="next-btn" onclick="changePage(1)">Siguiente ➡</button>
+      </div>
+      <button style="margin-top: 20px;" onclick="closeModal()">Cerrar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script> <!-- Vinculamos el archivo JS -->
+</body>
+</html>
+
