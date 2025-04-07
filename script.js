@@ -80,7 +80,24 @@ function closeModal() {
 }
 
 function searchSkills() {
+  // Obtén el valor ingresado en la barra de búsqueda y conviértelo a minúsculas
   var input = document.getElementById('search-bar').value.toLowerCase();
+
+  // Obtén todas las tarjetas de habilidad (skill cards)
   var skillCards = document.querySelectorAll('.skill-card');
+
+  // Recorre cada tarjeta de habilidad y verifica si el nombre contiene lo que se busca
   skillCards.forEach(function(card) {
-    var skillName = card.querySelector('.skill-name').textContent
+    // Obtiene el nombre de la habilidad que está dentro de la tarjeta
+    var skillName = card.querySelector('.skill-name').textContent.toLowerCase();
+
+    // Si el nombre de la habilidad incluye el texto de la barra de búsqueda
+    if (skillName.includes(input)) {
+      // Muestra la tarjeta
+      card.style.display = 'block';
+    } else {
+      // Si no coincide, oculta la tarjeta
+      card.style.display = 'none';
+    }
+  });
+}
