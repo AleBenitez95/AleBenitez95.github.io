@@ -135,3 +135,13 @@ button {
   font-size: 16px;
   cursor: pointer;
 }
+
+/* Estilo de los iconos */
+.skill-icon i {
+  color: #003366;
+  transition: color 0.3s ease;
+}
+
+.skill-card:hover .skill-icon i {
+  color: #ff4757;
+}
