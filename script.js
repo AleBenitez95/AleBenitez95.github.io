@@ -41,6 +41,18 @@ const skillsData = {
   ]
 };
 
+// Asociación de íconos con habilidades
+const skillIcons = {
+  "Linux": "fa-brands fa-linux",
+  "Windows": "fa-brands fa-windows",
+  "HTML5": "fa-brands fa-html5",
+  "Bash Script": "fa-solid fa-terminal",
+  "SQL": "fa-solid fa-database",
+  "Redes": "fa-solid fa-network-wired",
+  "Docker": "fa-brands fa-docker",
+  "GitHub": "fa-brands fa-github"
+};
+
 let currentSkill = "";
 let currentPage = 0;
 
@@ -91,9 +103,14 @@ function searchSkills() {
 function renderSkills() {
   const container = document.getElementById("skills-container");
   for (const skill in skillsData) {
+    const iconClass = skillIcons[skill] || "fa-solid fa-circle-question"; // Asocia el ícono con la habilidad
     const card = document.createElement("div");
     card.className = "skill-card";
-    card.innerHTML = `<h3 class="skill-name">${skill}</h3><button onclick="showModal('${skill}')">Ver detalles</button>`;
+    card.innerHTML = `
+      <div class="skill-icon"><i class="${iconClass}"></i></div> <!-- Aquí añades el ícono -->
+      <h3 class="skill-name">${skill}</h3>
+      <button onclick="showModal('${skill}')">Ver detalles</button>
+    `;
     container.appendChild(card);
   }
 }
