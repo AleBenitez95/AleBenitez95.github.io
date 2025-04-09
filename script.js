@@ -80,14 +80,22 @@ function closeModal() {
 }
 
 function searchSkills() {
-  var input = document.getElementById('search-bar').value.toLowerCase();
-  var skillCards = document.querySelectorAll('.skill-card');
+  const input = document.getElementById('search-bar').value.toLowerCase();
+  const skillCards = document.querySelectorAll('.skill-card');
   skillCards.forEach(function(card) {
-    var skillName = card.querySelector('.skill-name').textContent.toLowerCase();
-    if (skillName.includes(input)) {
-      card.style.display = 'block';
-    } else {
-      card.style.display = 'none';
-    }
+    const skillName = card.querySelector('.skill-name').textContent.toLowerCase();
+    card.style.display = skillName.includes(input) ? 'block' : 'none';
   });
 }
+
+function renderSkills() {
+  const container = document.getElementById("skills-container");
+  for (const skill in skillsData) {
+    const card = document.createElement("div");
+    card.className = "skill-card";
+    card.innerHTML = `<h3 class="skill-name">${skill}</h3><button onclick="showModal('${skill}')">Ver detalles</button>`;
+    container.appendChild(card);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", renderSkills);
