@@ -41,7 +41,7 @@ const skillsData = {
   ]
 };
 
-// Asociación de íconos con habilidades
+
 const skillIcons = {
   "Linux": "fa-brands fa-linux",
   "Windows": "fa-brands fa-windows",
