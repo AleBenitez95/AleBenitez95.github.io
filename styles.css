@@ -136,7 +136,6 @@ button {
   cursor: pointer;
 }
 
-/* Estilo de los iconos */
 .skill-icon i {
   color: #003366;
   transition: color 0.3s ease;
