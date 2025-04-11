@@ -141,6 +141,40 @@ button {
   transition: color 0.3s ease;
 }
 
+
 .skill-card:hover .skill-icon i {
+  color: #ff4757;
+}
+.contact-section {
+  margin-top: 60px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  text-align: center;
+  color: #fff;
+}
+
+.contact-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.contact-section i {
+  margin-right: 10px;
+  color: #ffcc00;
+}
+
+.contact-section a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-section a:hover {
   color: #ff4757;
 }
