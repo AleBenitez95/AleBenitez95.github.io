@@ -38,6 +38,12 @@ const skillsData = {
     "Repositorio remoto/local, commits y ramas.",
     "Pull requests, forks, issues.",
     "GitHub Actions y CI/CD."
+     
+  ]
+   "Proxmox": [
+    "Instalación y configuración inicial de nodos.",
+    "Gestión de máquinas virtuales y contenedores LXC.",
+    "Clusterización y migración en vivo (live migration)."
   ]
 };
 
@@ -50,7 +56,8 @@ const skillIcons = {
   "SQL": "fa-solid fa-database",
   "Redes": "fa-solid fa-network-wired",
   "Docker": "fa-brands fa-docker",
-  "GitHub": "fa-brands fa-github"
+  "GitHub": "fa-brands fa-github",
+  "Proxmox": "fa-solid fa-server"
 };
 
 let currentSkill = "";
