@@ -1,6 +1,6 @@
 const skillsData = {
   "Linux": [
-    "LPIC-1: Certificación profesional de Linux.",
+    "LPIC-1: Nivel Equivalente.",
     "Administración básica de sistemas: usuarios, permisos, procesos.",
     "Configuración de red y servicios SSH, Apache, etc."
   ],
